@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Express | Your Journey Starts Here</title>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body, html { height: 100vh; overflow: hidden; font-family: 'Inter', sans-serif; background: #e0e0e0; }
+
+        .bus-wrapper {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* City Map/Street Background */
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=2069') no-repeat center center/cover;
+            padding: 20px;
+        }
+
+        .main-card {
+            width: 95%;
+            max-width: 1200px;
+            height: 80vh;
+            background: #fff;
+            border-radius: 20px;
+            display: flex;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Top Yellow Stripe */
+        .main-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 15px;
+            background: #ffcc00;
+            z-index: 10;
+        }
+
+        /* Left Side: Text */
+        .info-panel {
+            flex: 1;
+            padding: 80px 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: #1a1a1a;
+            color: white;
+        }
+
+        .route-info {
+            color: #ffcc00;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+        }
+
+        h1 {
+            font-family: 'Archivo Black', sans-serif;
+            font-size: 5rem;
+            line-height: 0.9;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+
+        h1 span {
+            color: #ffcc00;
+        }
+
+        p {
+            color: #ccc;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+            max-width: 450px;
+        }
+
+        .book-btn {
+            padding: 20px 50px;
+            background: #ffcc00;
+            color: #000;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+            width: fit-content;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .book-btn:hover {
+            background: #fff;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 204, 0, 0.3);
+        }
+
+        /* Right Side: Bus Image */
+        .visual-panel {
+            flex: 1.2;
+            position: relative;
+            background: #eee;
+            overflow: hidden;
+        }
+
+        .bus-pic {
+            width: 100%;
+            height: 100%;
+            /* High-Quality Modern Bus Image */
+            background: url('https://images.unsplash.com/photo-1570125909232-eb263c188f7e?q=80&w=2071') no-repeat center center/cover;
+            transition: 1.5s ease;
+        }
+
+        .main-card:hover .bus-pic {
+            transform: scale(1.1);
+        }
+
+        .status-tag {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            background: rgba(0, 0, 0, 0.8);
+            color: #ffcc00;
+            padding: 10px 20px;
+            border: 2px solid #ffcc00;
+            font-weight: 900;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bus-wrapper">
+        <div class="main-card">
+            <div class="info-panel">
+                <div class="route-info">Intercity Premium Travel</div>
+                <h1>City<br><span>Express.</span></h1>
+                <p>Aaram-deh safar aur behtareen service. Hamari modern buses ke saath apne safar ko banayein yaadgar aur pur-sukoon.</p>
+                <a href="#" class="book-btn">Book Your Seat</a>
+            </div>
+
+            <div class="visual-panel">
+                <div class="bus-pic"></div>
+                <div class="status-tag">Live Tracking Active</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
